@@ -1,5 +1,7 @@
 In this assignment, I will follow Bailey, David and Lopez de Pardo(2012): 'Balanced baskets: a new approach to trading and hedging risks' *Journal of Investment Strategies (Risk Journals)* Vol. 1 No. 4 pp. 21-62
 
+If the latex formulae cannot be shown properly, please refer to the pdf file.
+
 **General Setting**
 
 Suppose we have $n$ instruments to create a portfolio, we have their covariance matrix $V$ and weights on each instruments $\omega$, a most common way to construct a basket is to minimize its variance subject to the asset already in hold, that is to minimize $\sigma_{\Delta B}=w'Vw$.
