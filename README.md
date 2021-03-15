@@ -12,6 +12,7 @@ The author introduced a measure of individual instrument's contribution to the b
 $$
 CtR_i=\frac{\partial\sigma_{\Delta B}}{\partial w_i}\frac{\omega_i}{\sigma_{\Delta B}}=\frac{\sigma_{\Delta B,\Delta S_i}}{\sigma_{\Delta B}^2}=\frac{\omega_i(V\omega)_i}{\sigma_{\Delta B}^2}
 $$
+
 **Equal Risk Contribution (ERC) Problem**
 
 The traditional risk minimization problem may result in a portfolio that
@@ -20,6 +21,7 @@ The ERC weight we are seeking is one that has equal CtR for each instrument, tha
 $$
 CtR_i = \frac{1}{n}\space\space\space\forall 1\leq i\leq n
 $$
+
 **Taylor's Expansion for CtR **
 
 The article derives the first two gradient of CtR, which is needed for a numerical solution of ERC problem, the result is presented below:
@@ -47,7 +49,8 @@ $$
 -\frac{c}{b}&a=0
 \end{cases}\tag{2}
 $$
- **A greedy algorithm is proposed to solve ERC problem**
+
+**A greedy algorithm is proposed to solve ERC problem**
 
 1. Generate the initial asset allocation $w^0$ and calculating the respective CtR for each instrument
 2. Suppose we already have $\omega^n$, Find the index $i$ that maximizes $|\frac{1}{n}-CtR_i|$, and compute $a,b,c$ according to (1), in this case $c = CtR_i-\frac{1}{n}$. Calculate $\Delta\omega_i$ according to (2), and let $\omega^{n+1}=\omega^{n}+\Delta\omega_i\textbf{e}_i$
